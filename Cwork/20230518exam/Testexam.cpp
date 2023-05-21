@@ -9,7 +9,7 @@ int StringCount(char* _Arr)
     {
         char i = *(_Arr + Ccount);
 
-        if ('0' == i)
+        if (0 == i)
         {
             break;
         }
@@ -25,6 +25,5 @@ int main()
 
         int Result = StringCount(Arr);
         cout << Result;
-        int a = 0;
     }
 }
