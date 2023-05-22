@@ -38,27 +38,25 @@ void TrimDelete(char* _string)
         }
         ++Chcount;
     }
-
     return;
 }
 
-/*
 int DigitsCount(int _Number)
 {
     if (0 == _Number)
     {
-        return;
+        return 0;
     }
 
-    
-    while (true)
+    int Count = 0;
+    while (_Number)
     {
-        _Number;
+        _Number /= 10;
+        ++Count;
     }
 
-    return 0;
+    return Count;
 }
-*/
 
 void StrCopy(const char* const _Left, char* _Right)
 {
@@ -79,8 +77,13 @@ void StrCopy(const char* const _Left, char* _Right)
 
 void NumberToString(int _Number, char* _Right)
 {
-    char itc = _Number + '48';
-    _Right = &itc;
+    int Count = DigitsCount(_Number);
+    for (size_t i = 0; i < Count; i++)
+    {
+        int Value = _Number % 10;
+        _Right[Count - i -1] = Value + '0';
+        _Number = _Number / 10;
+    }
     return;
 }
 
@@ -97,16 +100,15 @@ int main()
         TrimDelete(Arr);
         cout << "2번 TrimDelete의 답 : " << Arr << endl;
     }
-    /*
+    
     {
-        // 8이 리턴되게 만들어라.
         int Number = 67876578;
         int Result = DigitsCount(Number);
 
         cout << "3번 DigitsCount의 답 : " << Result << endl;
 
     }
-    */
+    
     {
         char ArrCopyText[256] = {};
 
@@ -117,11 +119,7 @@ int main()
 
     {
         char Result[256] = {};
-
-        // Result = "312312";
-
-        NumberToString(3, Result);
-
+        NumberToString(12345, Result);
 
         cout << "5번 NumberToString의 답 : " << Result << endl;
     }
