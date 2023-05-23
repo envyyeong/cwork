@@ -2,27 +2,11 @@
 #include <conio.h> // 키를 누를때까지 기다리는 함수
 using namespace std;
 
-// 숙제 1 -- 문자의 오른쪽끝을 맞춰오세요. 이름은 알파뱃만
-// 오른쪽끝 -------
-
-// 숙제 2 -- 실시간으로 만들어오세요.
-// 데미지 메세지가 나오는순간 체력이 곧바로 감소되게 만들어라.
-// 화면 지우는 함수 화면에 출력하는 함수를 잘 생각해보세요.
-// 그냥 무식하게 생각해라.
-
-// 숙제 3 -- 누군가 죽었다. 누군가의 Hp가 0이 된순간 종료.
-
-
-// 몬스터와 플레이어가 서로 한대씩 때리면서
-// 한명이 죽으면 끝납니다.
-// 지금 그걸 그래픽으로 표현할 방법이 없으니까.
-// 글자로 표현하겠습니다
-
 void StatusRender(const char* const _Name, int _Att, int _Hp)
 {
     int Bicount = 0;
     char Pn[40] = {};
-    char Op[40] = {};
+    char Op[40] = {}; 
 
     for (int i = 0; i < 40; ++i)
     {
@@ -98,13 +82,13 @@ int main()
         if (PlayerHp <= 0)
         {
             cout << "플레이어가 사망하였습니다." << endl;
-            return 0;
+            return ;
         }
 
         else if (MonsterHp <= 0)
         {
             cout << "몬스터가 사망하였습니다." << endl;
-            return 0;
+            return ;
         }
 
         _getch();
