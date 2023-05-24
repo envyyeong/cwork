@@ -30,6 +30,7 @@ int main()
 {
     size_t Size = sizeof(Test);
     // [][][][][][][][] [][][][][][][][] [][][][][][][][]
+    // 24
 
     Test NewTest;
 
@@ -41,15 +42,15 @@ int main()
     __int64 Address5 = (__int64)&NewTest.F;
 
     cout << Address0 << '\n' << Address1 << '\n' << Address2 << '\n' << Address3 << '\n' << Address4 << '\n' << Address5 << endl;
-
-    // A  814264350552
-    // B  186480851216
-    // C  666149451576
-    // D  540495838169
-    // E  944590026682
-    // F  844537133580
+    // 4 8 1 1 2 4
+    // A  302685878776 [A] [A] [A] [A] [ ] [ ] [ ] [ ] 
+    // B  302685878784 [B] [B] [B] [B] [B] [B] [B] [B]
+    // C  302685878792 [C] [D] [E] [E] [F] [F] [F] [F]
+    // D  302685878793
+    // E  302685878794
+    // F  302685878796
     
-   // Player Player1;
-   // Player Player2;
-  //  TestFunction(Player1, 20);
+    Player Player1;
+    Player Player2;
+    TestFunction(Player1, 20);
 }

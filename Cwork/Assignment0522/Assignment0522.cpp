@@ -6,7 +6,7 @@ void StatusRender(const char* const _Name, int _Att, int _Hp)
 {
     int Bicount = 0;
     char Pn[40] = {};
-    char Op[40] = {}; 
+    char Op[40] = {};  
 
     for (int i = 0; i < 40; ++i)
     {
