@@ -40,6 +40,14 @@ public:
         Z >= _Other.Z;
         W >= _Other.W;
     }
+
+    void operator+(const int4& _Other)
+    {
+        X >= _Other.X;
+        Y >= _Other.Y;
+        Z >= _Other.Z;
+        W >= _Other.W;
+    }
 };
 
 // 리스 이니셜라이저
@@ -134,10 +142,27 @@ public:
         Pos = _Pos;
     }
 
+    bool IsScreenOut(const int4& _pos)
+    {
+        if (0 > _pos.X)
+        {
+            return true;
+        }
+
+        if (0 > _pos.Y)
+        {
+            return true;
+        }
+
+        if (XLine <= _pos.X)
+        {
+
+        }
+    }
     void Locpos(const int4& _Pos)
     {
         if (_Pos.Y >= Pos.Y)
-            cout << "Out";
+            ;
     }
 
     Player()
@@ -147,27 +172,32 @@ public:
 
     Player(const Player&) = delete;
 
-    void Input()
+    void Input(ConsoleScreen _Sreen)
     {
         char Select = (char)_getch();
 
         switch (Select)
         {
         case 'a':
+            
             AddPos(Left);
-            Locpos(Left);
+            if (true == _Sreen->IsScreenOut(GetPos()))
+            {
+                 
+            }
+            // Locpos(Left);
             break;
         case 'd':
             AddPos(Right);
-            Locpos(Right);
+            // Locpos(Right);
             break;
         case 'w':
             AddPos(Up);
-            Locpos(Up);
+            // Locpos(Up);
             break;
         case 's':
             AddPos(Down);
-            Locpos(Down);
+            // Locpos(Down);
             break;
         default:
             break;
@@ -207,7 +237,7 @@ int main()
         Screen.SetPixel(MainPlayer.GetPos(), 'a');
         Screen.Print();
 
-        MainPlayer.Input();
+        MainPlayer.Input(&Screen);
     }
 
 
