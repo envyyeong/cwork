@@ -13,33 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Divide">
-      <UniqueIdentifier>{3a68eb94-8a3c-47bf-ac74-03d3e7e8058a}</UniqueIdentifier>
+    <Filter Include="Console">
+      <UniqueIdentifier>{fe209087-5803-4f8d-9a06-45d220df350c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Player.h">
-      <Filter>Divide</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster.h">
-      <Filter>Divide</Filter>
-    </ClInclude>
-    <ClInclude Include="Fightzone.h">
-      <Filter>Divide</Filter>
-    </ClInclude>
+    <ClCompile Include="Player.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleScreen.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="int4.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Player.cpp">
-      <Filter>Divide</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster.cpp">
-      <Filter>Divide</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Divide</Filter>
-    </ClCompile>
-    <ClCompile Include="Fightzone.cpp">
-      <Filter>Divide</Filter>
-    </ClCompile>
+    <ClInclude Include="Player.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="int4.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleScreen.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Console</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
