@@ -28,7 +28,7 @@ int main()
 
         for (int i = 0; i < 5; ++i)  // 객체 dwall c문자형태 5개 생성
         {
-            if (dwall[i].Getalive() == true)
+            if (dwall[i].Getalive() == true)  // 객체 dwall의 i번지 getalive가 true라면
             {
                 Screen.SetPixel(dwall[i].GetPos(), 'c');  // 객체 dwall i번지마다 c문자형태 생성
             }
